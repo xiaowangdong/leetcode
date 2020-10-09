@@ -18,8 +18,27 @@
  * @return {string}
  */
 var longestCommonPrefix = function(strs) {
-    let common = '',frist = strs[0]
-    strs.forEach(item =>{
-        
-    })
+    if(strs.length === 0 ) return ""
+    let frist = strs[0]
+    for(let i =1;i<strs.length;i++){
+        let j =0;
+        for(;j<frist.length&&j<strs[i].length;j++){
+            if(strs[i][j] != frist[j]){
+                break;
+            }
+        }
+        frist = frist.substr(0,j)
+        if(frist === "") return frist
+    }
+    return frist
 };
+console.log(longestCommonPrefix(["flower","flow","flight"]));
+
+/**
+ * 解题思路     Solving Problems
+ * 1.传入strs为空，返回""
+ * 2.暂存strs中第一个字符串将其与strs中其他字符串进行比对找出公有前缀
+ * 3.第一层循环用每次拿出strs中的一个字符串，并将第二层循环中的比对下标置空
+ * 4.第二层循环用于比对从strs中拿出的字符串与初始字符串
+ * 5.frist = frist.substr(0,j) 用于找出公有前缀
+ */
