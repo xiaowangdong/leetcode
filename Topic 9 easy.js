@@ -29,11 +29,3 @@ var isPalindrome = function(x) {
         return false
     }
 };
-
-var isPalindrome1 = function (x) {
-    let result = 0,_x = x
-    if(x<0) return false
-    for(let i = x.length;i>0;){
-        
-    }
-}
