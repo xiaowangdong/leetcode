@@ -33,5 +33,37 @@
  * @return {boolean}
  */
 var isValid = function(s) {
-
+    let arr = [],l = s.length
+    if(l%2) return false
+    for(let i =0;i<l;i++){
+        let str = s[i]
+        switch(str){
+            case "(" :
+                arr.push(str);
+                break;
+            case '{' :
+                arr.push(str);
+                break;
+            case '[' :
+                arr.push(str);
+                break;
+            case ")" :
+                if(arr.pop() !== "(") return false;
+                break;
+            case '}' :
+                if(arr.pop() !== '{') return false;
+                break;
+            case ']' :
+                if(arr.pop() !== '[') return false;
+                break;
+        }
+    }
+    return !arr.length
 };
+
+console.log(isValid('()'));
+
+/**
+ * Solving Problems
+ * 
+ */
