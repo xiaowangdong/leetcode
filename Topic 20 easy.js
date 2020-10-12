@@ -65,5 +65,22 @@ console.log(isValid('()'));
 
 /**
  * Solving Problems
+ * Traversing through s can be similar to go into and out of stack,
+ * Run into stack when left bracket is encountered,
+ * Run out of stack when right bracket is encountered.as the same time,
+ * when the last bit in the arr array is not equal to the left bracket,
+ * it means that the condition is not met and false is return
+ * Switch loop is required
+ * The switch statement is used to perform the different action based on different condition
  * 
+ * Examples
+ * switch(expression){
+ *      case condition : 
+ *          code block;(if the expression == condition,The following code block will be executed)
+ *          break;(Keyword,The switch loop teriminates here and jumps out of the loop)
+ *      case condition2 :
+ *          code block;
+ *      default : 
+ *          default code block;(what to do when all the matches don't exist)
+ * }
  */
