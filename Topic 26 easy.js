@@ -25,6 +25,7 @@ var removeDuplicates = function(nums) {
         if(nums[i+1] !== undefined){
             if(nums[i] === nums[i+1]){
                 nums.splice(i,1),i-- // 注意点：在碰到相同数的时候需要将指针暂停重新比对
+                // Note : when encountering the same number,you need to pause the pointer for re alignment
             }
         }
         
