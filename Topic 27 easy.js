@@ -52,6 +52,11 @@ var removeElement = function(nums, val) {
  * 这种思路在移除元素较多时更适合使用，最极端的情况是全部元素都需要移除，遍历一遍结束即可
  * 时间复杂度：O(n)；空间复杂度：O（1）
  * 
- * 
  * Train of thought
+ * traverse the array nums and take out one item at a time
+ * If the number of items token out is not equal to the number to be removed,copy and overlay,nums[ans] = num,at the same time, ans increased by 1
+ * If items is the same , the number will be skipped and the ans is unchanged(this item is overriden if an unequal number follows that needs to be removed)
+ * Finally,ans is the length returned
+ * This idea is more suitable for remove more elements , In the most extreme case, all elements need to be removed
+ * 
  */
